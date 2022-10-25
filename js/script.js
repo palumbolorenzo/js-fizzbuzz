@@ -17,21 +17,18 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 
 const eleSquares = document.querySelector('.squares');
 const eleTitle = document.querySelector('h1');
-const maxNumber = parseInt(prompt('Dammi il limite massimo'));
 
-eleTitle.addEventListener('click', function () {
-	for (let i = 1; i <= maxNumber; i++) {
-        if (i % 5 == 0 && i % 3 == 0) {
-            eleSquares.innerHTML += `<div class="fizzbuzz">${"FizzBuzz"}</div>`;
-        }
-        if (i % 3 == 0 && i % 5 !=0) {
-            eleSquares.innerHTML += `<div class="fizz">${"Fizz"}</div>`;
-        }
-        if (i % 3 != 0 && i % 5 ==0) {
-            eleSquares.innerHTML += `<div class="buzz">${"Buzz"}</div>`;
-        }
-        if (i % 3 != 0 && i % 5 != 0) {
-            eleSquares.innerHTML += `<div class="sq">${i}</div>`;
-        }
-	} 
-});
+for (let i = 1; i <= 100; i++) {
+    if (i % 5 == 0 && i % 3 == 0) {
+        eleSquares.innerHTML += `<div class="fizzbuzz">${"FizzBuzz"}</div>`;
+    }
+    if (i % 3 == 0 && i % 5 !=0) {
+        eleSquares.innerHTML += `<div class="fizz">${"Fizz"}</div>`;
+    }
+    if (i % 3 != 0 && i % 5 ==0) {
+        eleSquares.innerHTML += `<div class="buzz">${"Buzz"}</div>`;
+    }
+    if (i % 3 != 0 && i % 5 != 0) {
+        eleSquares.innerHTML += `<div class="sq">${i}</div>`;
+    }
+};
